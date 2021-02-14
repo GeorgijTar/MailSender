@@ -9,21 +9,33 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Image\address_book_64.png">
+    <None Remove="Image\address_book_64.png" />
+    <None Remove="Image\clock_time_32.ico" />
+    <None Remove="Image\clock_time_64.png" />
+    <None Remove="Image\message_64.png" />
+    <None Remove="Image\send_164.png" />
+    <None Remove="Image\statistick.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\address_book_64.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Image\clock_time_32.ico">
+    </Resource>
+    <Resource Include="Image\clock_time_32.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Image\clock_time_64.png">
+    </Resource>
+    <Resource Include="Image\clock_time_64.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Image\message_64.png">
+    </Resource>
+    <Resource Include="Image\message_64.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Image\send_164.png">
+    </Resource>
+    <Resource Include="Image\send_164.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
+    <Resource Include="Image\statistick.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

@@ -37,12 +37,20 @@
             <TabItem Name="tabItem3" HorizontalContentAlignment="Right" Width="120">
                 <TabItem.Header>
                     <DockPanel>
+                       
+
                         <Image Source="/Image/message_64.png" Width="16" Height="16"/>
                         <Label  Content="Редактор писем" Margin="3,0,0,0"/>
                     </DockPanel>
                 </TabItem.Header>
                 </TabItem>
-                <TabItem Header="Статистика">                
+            <TabItem Name="tabItem4" HorizontalContentAlignment="Right" Width="120">
+                <TabItem.Header>
+                    <DockPanel>
+                        <Image Source="/Image/statistick.ico" Width="16" Height="16"/>
+                        <Label  Content="Статстика" Margin="3,0,0,0"/>
+                    </DockPanel>
+                </TabItem.Header>
             </TabItem>
         </TabControl>
     </DockPanel>
