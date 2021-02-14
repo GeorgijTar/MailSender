@@ -23,5 +23,10 @@ namespace MailSender.View
         {
             InitializeComponent();
         }
+
+        private void TabItem_DpiChanged(object sender, DpiChangedEventArgs e)
+        {
+
+        }
     }
 }

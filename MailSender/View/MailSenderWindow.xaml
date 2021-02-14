@@ -6,7 +6,44 @@
         xmlns:local="clr-namespace:MailSender.View"
         mc:Ignorable="d"
         Title="Рассылка писем" Height="450" Width="800">
-    <Grid>
-        <Button Content="Кнопка" Height="20" Width="80" Margin="360,159,360,255"/>
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Создать"/>
+                <MenuItem Header="Открыть"/>
+                <MenuItem Header="Сохранить"/>
+                <Separator/>
+                <MenuItem Header="Выход"/>
+            </MenuItem>
+            <MenuItem Header="Справка"/>
+        </Menu>
+        <TabControl >
+            <TabItem Name="tabItem1" HorizontalContentAlignment="Right" Width="120">
+                <TabItem.Header>
+                    <DockPanel>
+                        <Image Source="/Image/address_book_64.png" Width="16" Height="16"/>
+                        <Label  Content="Адресаты" Margin="3,0,0,0"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem Name="tabItem2" HorizontalContentAlignment="Right" Width="120">
+                <TabItem.Header>
+                    <DockPanel>
+                        <Image Source="/Image/clock_time_32.ico" Width="16" Height="16" />
+                        <Label  Content="Планировщик" Margin="3,0,0,0"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem Name="tabItem3" HorizontalContentAlignment="Right" Width="120">
+                <TabItem.Header>
+                    <DockPanel>
+                        <Image Source="/Image/message_64.png" Width="16" Height="16"/>
+                        <Label  Content="Редактор писем" Margin="3,0,0,0"/>
+                    </DockPanel>
+                </TabItem.Header>
+                </TabItem>
+                <TabItem Header="Статистика">                
+            </TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>
