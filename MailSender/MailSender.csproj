@@ -20,7 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SenderNoAttach\SenderNoAttach.csproj" />
+    <ProjectReference Include="..\SenderNoAttach\SenderNoAttach.csproj">
+      <Private>true</Private>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
