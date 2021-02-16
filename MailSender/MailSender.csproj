@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <None Remove="Image\address_book_64.png" />
+    <None Remove="Image\arrow_left.png" />
+    <None Remove="Image\arrow_right.png" />
     <None Remove="Image\clock_time_32.ico" />
     <None Remove="Image\clock_time_64.png" />
     <None Remove="Image\message_64.png" />
@@ -19,6 +21,12 @@
 
   <ItemGroup>
     <Resource Include="Image\address_book_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\arrow_left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\arrow_right.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Image\clock_time_32.ico">
