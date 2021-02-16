@@ -25,15 +25,15 @@
                     <TextBox x:Name="LoginEd"  Margin="-285,-141,211,144"/>
                     <Label Content="Пароль" Margin="-333,-110,332,110"/>
                     <Label Content="Сервер отправки" Margin="-332,-79,332,79"/>
-                    <Label Content="Текст письмса" Margin="-332,-56,332,56"/>
-                    <TextBox x:Name="MessageEd" TextWrapping="Wrap" Margin="-320,-37,-188,-20"/>
+                    <Label Content="Текст письмса" Margin="-332,-19,332,19"/>
+                    <TextBox x:Name="MessageEd" TextWrapping="Wrap" Margin="-320,0,-188,-57"/>
                     <TextBox x:Name="ServerEd"  Margin="-232,-81,158,84"/>
                     <Label Content="Адрес отправителя" Margin="-84,-141,84,141"/>
                     <TextBox x:Name="SenderEd" Margin="27,-141,-188,144"/>
                     <Label Content="Адрес получателя" Margin="-84,-113,84,113"/>
-                    <TextBox x:Name="RecipientEd" Text="TextBox" TextWrapping="Wrap" Margin="27,-113,-188,116"/>
+                    <TextBox x:Name="RecipientEd" Margin="27,-113,-188,116"/>
                     <PasswordBox x:Name="PassvordEd" Margin="-285,-112,211,112" />
-                    <Button x:Name="SendMessage" Margin="187,52,-188,-52">
+                    <Button x:Name="SendMessage" Margin="187,89,-188,-89" Click="SendMessage_Click">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal" >
                                 <Image Source="/Image/send_164.png" Width="20" Height="20" Margin="0,0,5,0" />
@@ -41,6 +41,10 @@
                             </StackPanel>
                         </Button.Content>
                     </Button>
+                    <Label Content="Тема письма" Margin="-332,-46,332,46"/>
+                    <TextBox x:Name="MessSubj"  Margin="-232,-48,158,51"/>
+                    <Label Content="Порт" Margin="-17,-79,17,79"/>
+                    <TextBox x:Name="ServerPort"  Margin="27,-81,28,84"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabItem1">

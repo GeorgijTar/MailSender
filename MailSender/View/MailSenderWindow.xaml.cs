@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SenderNoAttach;
 
 namespace MailSender.View
 {
@@ -27,6 +28,13 @@ namespace MailSender.View
         private void TabItem_DpiChanged(object sender, DpiChangedEventArgs e)
         {
 
+        }
+
+        private void SendMessage_Click(object sender, RoutedEventArgs e)
+        {
+            SenderMessage mess = new SenderMessage(LoginEd.Text, PassvordEd.Password, SenderEd.Text, RecipientEd.Text,
+                              ServerEd.Text, MessageEd.Text, MessSubj.Text, ServerPort.Text);
+            MessageBox.Show(mess.MessageSend(), "Отправка почты", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

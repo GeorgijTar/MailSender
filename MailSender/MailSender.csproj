@@ -20,6 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SenderNoAttach\SenderNoAttach.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Image\address_book_64.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
