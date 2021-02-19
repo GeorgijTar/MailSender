@@ -34,7 +34,11 @@ namespace MailSender.View
         {
             SenderMessage mess = new SenderMessage(LoginEd.Text, PassvordEd.Password, SenderEd.Text, RecipientEd.Text,
                               ServerEd.Text, MessageEd.Text, MessSubj.Text, ServerPort.Text);
-            MessageBox.Show(mess.MessageSend(), "Отправка почты", MessageBoxButton.OK, MessageBoxImage.Information);
+            string rezalt = mess.MessageSend();
+            MessageWindow MW = new MessageWindow();
+            MW.TbMessage.Text = rezalt;
+            MW.ShowDialog();
+            //MessageBox.Show(rezalt, "Отправка почты", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

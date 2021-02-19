@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MailSender.View"
         xmlns:Control="clr-namespace:MailSender.Control" x:Class="MailSender.View.MailSenderWindow"
         mc:Ignorable="d"
-        Title="Рассылка писем" Height="450" Width="800">
+        Title="Рассылка писем" Height="450" Width="808">
     <DockPanel>
         <Menu DockPanel.Dock="Top" VerticalAlignment="Top">
             <MenuItem Header="Файл">
@@ -20,20 +20,20 @@
         </Menu>
         <TabControl>
             <TabItem x:Name="tabItemDz" Header="Реализация ДЗ к уроку 1">
-                <Grid>
-                    <Label Content="Логин" Margin="-332,-141,332,141"/>
-                    <TextBox x:Name="LoginEd"  Margin="-285,-141,211,144"/>
-                    <Label Content="Пароль" Margin="-333,-110,332,110"/>
-                    <Label Content="Сервер отправки" Margin="-332,-79,332,79"/>
-                    <Label Content="Текст письмса" Margin="-332,-19,332,19"/>
-                    <TextBox x:Name="MessageEd" TextWrapping="Wrap" Margin="-320,0,-188,-57"/>
-                    <TextBox x:Name="ServerEd"  Margin="-232,-81,158,84"/>
-                    <Label Content="Адрес отправителя" Margin="-84,-141,84,141"/>
-                    <TextBox x:Name="SenderEd" Margin="27,-141,-188,144"/>
-                    <Label Content="Адрес получателя" Margin="-84,-113,84,113"/>
-                    <TextBox x:Name="RecipientEd" Margin="27,-113,-188,116"/>
-                    <PasswordBox x:Name="PassvordEd" Margin="-285,-112,211,112" />
-                    <Button x:Name="SendMessage" Margin="187,89,-188,-89" Click="SendMessage_Click">
+                <Grid Height="28" Width="108">
+                    <Label Content="Логин:" Margin="-332,-141,335,142"/>
+                    <TextBox x:Name="LoginEd"  Margin="-285,-141,214,145"/>
+                    <Label Content="Пароль" Margin="-333,-110,335,111"/>
+                    <Label Content="Сервер отправки" Margin="-332,-79,335,80"/>
+                    <Label Content="Текст письмса" Margin="-332,-19,335,20"/>
+                    <TextBox x:Name="MessageEd" TextWrapping="Wrap" Margin="-320,0,-185,-56"/>
+                    <TextBox x:Name="ServerEd"  Margin="-232,-81,161,85"/>
+                    <Label Content="Адрес отправителя" Margin="-84,-141,87,142"/>
+                    <TextBox x:Name="SenderEd" Margin="27,-141,-185,145"/>
+                    <Label Content="Адрес получателя" Margin="-84,-113,87,114"/>
+                    <TextBox x:Name="RecipientEd" Margin="27,-113,-185,117"/>
+                    <PasswordBox x:Name="PassvordEd" Margin="-285,-112,214,113" />
+                    <Button x:Name="SendMessage" Margin="187,89,-185,-88" Click="SendMessage_Click">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal" >
                                 <Image Source="/Image/send_164.png" Width="20" Height="20" Margin="0,0,5,0" />
@@ -41,10 +41,10 @@
                             </StackPanel>
                         </Button.Content>
                     </Button>
-                    <Label Content="Тема письма" Margin="-332,-46,332,46"/>
-                    <TextBox x:Name="MessSubj"  Margin="-232,-48,158,51"/>
-                    <Label Content="Порт" Margin="-17,-79,17,79"/>
-                    <TextBox x:Name="ServerPort"  Margin="27,-81,28,84"/>
+                    <Label Content="Тема письма" Margin="-332,-46,335,47"/>
+                    <TextBox x:Name="MessSubj"  Margin="-232,-48,161,52"/>
+                    <Label Content="Порт" Margin="-17,-79,81,80"/>
+                    <TextBox x:Name="ServerPort"  Margin="0,-81,31,85" HorizontalAlignment="Right" Width="50"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabItem1">
