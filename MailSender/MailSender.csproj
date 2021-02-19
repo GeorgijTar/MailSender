@@ -4,6 +4,52 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <StartupObject>MailSender.App</StartupObject>
+    <ApplicationIcon>icon_64.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Image\address_book_64.png" />
+    <None Remove="Image\arrow_left.png" />
+    <None Remove="Image\arrow_right.png" />
+    <None Remove="Image\clock_time_32.ico" />
+    <None Remove="Image\clock_time_64.png" />
+    <None Remove="Image\message_64.png" />
+    <None Remove="Image\send_164.png" />
+    <None Remove="Image\statistick.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SenderNoAttach\SenderNoAttach.csproj">
+      <Private>true</Private>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\address_book_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\arrow_left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\arrow_right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\clock_time_32.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\clock_time_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\message_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\send_164.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\statistick.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
 
 </Project>

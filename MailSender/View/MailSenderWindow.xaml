@@ -1,0 +1,101 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailSender.View"
+        xmlns:Control="clr-namespace:MailSender.Control" x:Class="MailSender.View.MailSenderWindow"
+        mc:Ignorable="d"
+        Title="Рассылка писем" Height="450" Width="808">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Создать"/>
+                <MenuItem Header="Открыть"/>
+                <MenuItem Header="Сохранить"/>
+                <Separator/>
+                <MenuItem Header="Выход"/>
+            </MenuItem>
+            <MenuItem Header="Справка"/>
+        </Menu>
+        <TabControl>
+            <TabItem x:Name="tabItemDz" Header="Реализация ДЗ к уроку 1">
+                <Grid Height="28" Width="108">
+                    <Label Content="Логин:" Margin="-332,-141,335,142"/>
+                    <TextBox x:Name="LoginEd"  Margin="-285,-141,214,145"/>
+                    <Label Content="Пароль" Margin="-333,-110,335,111"/>
+                    <Label Content="Сервер отправки" Margin="-332,-79,335,80"/>
+                    <Label Content="Текст письмса" Margin="-332,-19,335,20"/>
+                    <TextBox x:Name="MessageEd" TextWrapping="Wrap" Margin="-320,0,-185,-56"/>
+                    <TextBox x:Name="ServerEd"  Margin="-232,-81,161,85"/>
+                    <Label Content="Адрес отправителя" Margin="-84,-141,87,142"/>
+                    <TextBox x:Name="SenderEd" Margin="27,-141,-185,145"/>
+                    <Label Content="Адрес получателя" Margin="-84,-113,87,114"/>
+                    <TextBox x:Name="RecipientEd" Margin="27,-113,-185,117"/>
+                    <PasswordBox x:Name="PassvordEd" Margin="-285,-112,214,113" />
+                    <Button x:Name="SendMessage" Margin="187,89,-185,-88" Click="SendMessage_Click">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Source="/Image/send_164.png" Width="20" Height="20" Margin="0,0,5,0" />
+                                <Label Content="Отправить"></Label>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                    <Label Content="Тема письма" Margin="-332,-46,335,47"/>
+                    <TextBox x:Name="MessSubj"  Margin="-232,-48,161,52"/>
+                    <Label Content="Порт" Margin="-17,-79,81,80"/>
+                    <TextBox x:Name="ServerPort"  Margin="0,-81,31,85" HorizontalAlignment="Right" Width="50"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabItem1">
+                <TabItem.Header>
+                    <DockPanel>
+                        <Image Source="/Image/address_book_64.png" Width="16" Height="16"/>
+                        <Label  Content="Адресаты" Margin="3,0,0,0"/>
+                    </DockPanel>
+                </TabItem.Header>
+                <ToolBarTray Height="60"  VerticalAlignment="Center" Width="573">
+                    <ToolBar  HorizontalAlignment="Left" VerticalAlignment="Center" Width="568" Height="30">
+                        <Label Content="Выбрать отправителя"/>
+                        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="270" Height="25">
+                            <ComboBoxItem Content="georgij.tar@yandex.ru"/>
+                            <ComboBoxItem Content="test_sender@yandex.ru"/>
+                            <ComboBoxItem Content="adress@yandex.ru"/>
+                        </ComboBox>
+                        <Button x:Name="btnAddSender" Height="25" Width="20"/>
+                        <Button x:Name="btnEditSender" Height="25" Width="15"/>
+                        <Button x:Name="btnDeleteSender" Height="25" Width="25"/>
+                    </ToolBar>
+                </ToolBarTray>
+            </TabItem>
+            <TabItem x:Name="tabItem2" HorizontalContentAlignment="Right" Width="120">
+                <TabItem.Header>
+                    <DockPanel>
+                        <Image Source="/Image/clock_time_32.ico" Width="16" Height="16" />
+                        <Label  Content="Планировщик" Margin="3,0,0,0"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem x:Name="tabItem3" HorizontalContentAlignment="Right" Width="120">
+                <TabItem.Header>
+                    <DockPanel>
+                        <Image Source="/Image/message_64.png" Width="16" Height="16"/>
+                        <Label  Content="Редактор писем" Margin="3,0,0,0"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem x:Name="tabItem4" HorizontalContentAlignment="Right" Width="120">
+                <TabItem.Header>
+                    <DockPanel>
+                        <Image Source="/Image/statistick.ico" Width="16" Height="16"/>
+                        <Label  Content="Статстика" Margin="3,0,0,0"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+            <Control:TabSwitcherControl/>
+
+
+
+        </TabControl>
+    </DockPanel>
+</Window>
