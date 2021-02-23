@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:fa="http://schemas.fontawesome.com/icons/"
         xmlns:local="clr-namespace:MailSender.View"
+        xmlns:td="clr-namespace:MailSender.Data"
+         xmlns:m="clr-namespace:MailSender.Models"
         mc:Ignorable="d"
         Title="MailSenderWindow" Height="450" Width="800">
     <DockPanel>
@@ -28,20 +30,35 @@
                 <DockPanel>
                     <ToolBarTray DockPanel.Dock="Top">
                         <ToolBar Header="Серверы:">
-                            <ComboBox MinWidth="120" MaxWidth="170" SelectedIndex="0" Margin="25,0,0,0">
-                                <ComboBoxItem>smtp.yandex.ru:465</ComboBoxItem>
-                                <ComboBoxItem>smtp.mail.ru:465</ComboBoxItem>
-                                <ComboBoxItem>smtp.gmail.com:587</ComboBoxItem>
+                            <ComboBox MinWidth="120" MaxWidth="170" SelectedIndex="0" Margin="25,0,0,0"
+                                      ItemsSource="{x:Static td:TestData.Servers}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate DataType="m:Server">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Adres}"/>
+                                            <TextBlock Text=": "/>
+                                            <TextBlock Text="{Binding Port}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
                             </ComboBox>
                             <Button ToolTip="Добавить" fa:Awesome.Content="Solid_PlusCircle" Foreground="DarkGreen"></Button>
                             <Button ToolTip="Редактировать" fa:Awesome.Content="Solid_Edit" Foreground="DarkOrange"></Button>
                             <Button ToolTip="Удалить" fa:Awesome.Content="Solid_Trash" Foreground="DarkRed"></Button>
                         </ToolBar>
                         <ToolBar Header="Отправители:" Band="1">
-                            <ComboBox MinWidth="120" MaxWidth="170" SelectedIndex="0">
-                                <ComboBoxItem>ivanov@yandex.ru</ComboBoxItem>
-                                <ComboBoxItem>petrov@mail.ru</ComboBoxItem>
-                                <ComboBoxItem>sidorov@gmail.com</ComboBoxItem>
+                            <ComboBox MinWidth="120" MaxWidth="170" SelectedIndex="0"
+                                      ItemsSource="{x:Static td:TestData.Senders}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate DataType="m:Sender">
+                                        <StackPanel Orientation="Horizontal">
+                                          <TextBlock Text="{Binding Name}"/>
+                                            <TextBlock Text=": "/>
+                                            <TextBlock Text="{Binding Address}"/>
+                                        </StackPanel>
+                                        
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
                             </ComboBox>
                             <Button ToolTip="Добавить" fa:Awesome.Content="Solid_PlusCircle" Foreground="DarkGreen"></Button>
                             <Button ToolTip="Редактировать" fa:Awesome.Content="Solid_Edit" Foreground="DarkOrange"></Button>
@@ -49,7 +66,7 @@
                         </ToolBar>
                         <ToolBar>
                             <TextBlock Text="Перйти в планировщик" VerticalAlignment="Center"/>
-                            <Button fa:Awesome.Content="Regular_Clock" Foreground="DarkBlue"/>
+                            <Button fa:Awesome.Content="Regular_Clock" Foreground="DarkBlue" Margin="3,0,0,0"/>
                         </ToolBar>
                         <ToolBar Band="1" Header="Получатели:">
                             <Button ToolTip="Добавить" fa:Awesome.Content="Solid_PlusCircle" Foreground="DarkGreen"></Button>
@@ -58,11 +75,14 @@
                         </ToolBar>                        
                     </ToolBarTray>
                     <GroupBox Header="Список получателей" Margin="3">
-                        <DataGrid AutoGenerateColumns="False">
+                        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" 
+                                  GridLinesVisibility="Vertical" VerticalGridLinesBrush="DarkGray"
+                                  AlternatingRowBackground="Aqua"
+                                  ItemsSource="{x:Static td:TestData.Recipients}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" MinWidth="30"/>
-                                <DataGridTextColumn Header="Имя" Width="*" />
-                                <DataGridTextColumn Header="Адрес" MinWidth="200"/>
+                                <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding Name}" />
+                                <DataGridTextColumn Header="Адрес" MinWidth="200" Binding="{Binding Address}"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </GroupBox>
